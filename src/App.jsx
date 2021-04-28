@@ -46,7 +46,9 @@ function App() {
 			<div className="row">
 				<div className="col-12">
 					<AddFilms newFilm={addNewFilm} />
-					<TableFilms movies={peliculas} deleteFilm={deleteFilm} read={markAsRead} />
+					{peliculas.length === 0 ? null : (
+						<TableFilms movies={peliculas} deleteFilm={deleteFilm} read={markAsRead} />
+					)}
 				</div>
 			</div>
 		</div>
